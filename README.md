@@ -1,7 +1,8 @@
 
 # Rapport
 
-Lagt till en second activity i projekt efter en del försk och tillslut en ny fork   
+Lagt till en second activity i projekt efter en del försk och tillslut en ny fork
+la seden till en knapp och kod för att koppla kanppen till att öppnna det nya förnstert
 ```
 public class SecondActivity extends AppCompatActivity {
 
@@ -21,9 +22,23 @@ public class SecondActivity extends AppCompatActivity {
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+ button = (Button)  findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSecondActivity();
+            }
+        });
+    }
+
+    public void openSecondActivity(){
+        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+        startActivity(intent);
+    }
 ```
 
-Bilder läggs i samma mapp som markdown-filen.
+
 
 ![](android.png)
 

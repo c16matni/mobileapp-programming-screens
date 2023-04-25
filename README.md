@@ -1,7 +1,7 @@
 
 # Rapport
 
-Lagt till en second activity i projekt   
+Lagt till en second activity i projekt efter en del försk och tillslut en ny fork   
 ```
 public class SecondActivity extends AppCompatActivity {
 

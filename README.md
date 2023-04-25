@@ -2,7 +2,10 @@
 # Rapport
 
 Lagt till en second activity i projekt efter en del försk och tillslut en ny fork
-la seden till en knapp och kod för att koppla kanppen till att öppnna det nya förnstert
+la seden till en knapp och kod för att koppla kanppen till att öppnna det nya förnstret
+
+sedan jobbade jag fram den koden som syns nedan för att göra så att man kan skriva in sitt namn och sin ålder
+och så att det sedan syns på aktivitet 2
 ```
 public class SecondActivity extends AppCompatActivity {
 
@@ -27,20 +30,36 @@ public class SecondActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openSecondActivity();
-            }
+              String nameS = name.getText().toString();
+                String ageS = age.getText().toString();
+
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+
+                intent.putExtra("Namn",nameS );
+                intent.putExtra("Ålder",ageS );
+
+                startActivity(intent);
         });
     }
 
-    public void openSecondActivity(){
-        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-        startActivity(intent);
-    }
+  
+ 
+    
+     name = findViewById(R.id.getname);
+        age = findViewById(R.id.getage);
+
+        Intent intent = getIntent();
+        String nameS = intent.getStringExtra("Namn");
+        String ageS = intent.getStringExtra("Ålder");
+
+        name.setText(nameS);
+        age.setText(ageS);
 ```
 
 
 
-![](android.png)
+
+![](Screenshot_20230425_164503.png)
 
 Läs gärna:
 

@@ -1,11 +1,13 @@
 
 # Rapport
 
-Lagt till en second activity i projekt efter en del försk och tillslut en ny fork
+
 la seden till en knapp och kod för att koppla kanppen till att öppnna det nya förnstret
 
 sedan jobbade jag fram den koden som syns nedan för att göra så att man kan skriva in sitt namn och sin ålder
 och så att det sedan syns på aktivitet 2
+
+Lagt till en second activity xml fil med tillhörande java class efter en del försk och tillslut en ny fork
 ```
 public class SecondActivity extends AppCompatActivity {
 
@@ -15,6 +17,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
     }
 }
+
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -24,7 +27,11 @@ public class SecondActivity extends AppCompatActivity {
     tools:context=".SecondActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
+```
+vidare la jag till en kanpp efter jag deklarerat den i min main activiety för att ha något som öppnar min second activety
+sen satte jag på en on click litener på kanppen coh en metod till detta som uppfyllde funktionen att öppna andra skärmen
+edan jobbade jag fram den koden som syns nedan för att göra så att man kan skriva in sitt namn och sin ålder
+```
 
  button = (Button)  findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -42,10 +49,12 @@ public class SecondActivity extends AppCompatActivity {
         });
     }
 
-  
+ ```
+det sista jag gjorde var att skriva kod för att de angivna namnet och åldern skulle synas på sida 2  
+```
  
     
-     name = findViewById(R.id.getname);
+    name = findViewById(R.id.getname);
         age = findViewById(R.id.getage);
 
         Intent intent = getIntent();
@@ -59,7 +68,8 @@ public class SecondActivity extends AppCompatActivity {
 
 
 
-![](Screenshot_20230425_164503.png)
+![](Screenshot_20230518_152117.png)
+![](Screenshot_20230518_152153.png)
 
 Läs gärna:
 
